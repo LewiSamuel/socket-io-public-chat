@@ -33,12 +33,15 @@ html, body {
     line-height: 50px;
     font-weight: bold;
     color: #FFF;
+    box-shadow: none;
     margin-top: 10px;
+    border: none;
   }
   
   .messages {
     width: 600px;
     height: 400px;
+    overflow-y: scroll;
     margin: 20px 0;
     border: 1px solid #ddd;
     padding: 20px;

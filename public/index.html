@@ -25,7 +25,8 @@
 
         // renderiza mensagem 
         function renderMessage(message){
-            $('.messages').append('<div class="message"><b>' + message.author + ':</b> ' + message.message + '</div>')
+            $('.messages').append('<div class="message"><b>' + message.author + ':</b> ' + message.message + '</div>');
+            $('.messages').scrollTop($('.messages')[0].scrollHeight)
         }
 
         // ouvir evento de receber mensagem
@@ -58,7 +59,8 @@
                     message: message
                 }
                 // renderiza mensagem 
-                renderMessage(messageObject)
+                renderMessage(messageObject);
+                $("input[name=message]").val("");
 
                 // envia o objeto da mensagem ao evento sendMEssage
                 socket.emit('sendMessage', messageObject);
